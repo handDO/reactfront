@@ -13,7 +13,6 @@
 
 a {
     text-decoration: none;
-    margin-left: 20px;
     color: #0f4191;
     transition: all 0.1s ease-in-out;
     cursor: pointer;
@@ -23,13 +22,110 @@ a {
     }
 }
 
-.looginbox {
-    margin-right: 7px;
-}
-
-.login {
-    margin-right: 35px;
-    margin-left: 13px;
+.loginbox {
+    .login {
+        margin-right: 35px;
+        margin-left: 13px;
+    }
+    .delimiter {
+        min-height: 1px;
+        width: 300px;
+        border-top: 1px solid #ccc;
+        margin: 24px 0 0 -15px;
+        text-align: center;
+        &:before {
+            content: 'ИЛИ';
+            position: absolute;
+            margin-top: -11px;
+            margin-left: -20px;
+            padding: 0 5px;
+            background: white;
+        }
+    }
+    .loginform {
+        position: absolute;
+        background: white;
+        display: none;
+        border-radius: 15px;
+        padding: 15px;
+        width: 300px;
+        margin-left: -210px;
+        margin-top: 20px;
+        text-align: center;
+        &:before {
+            content: '';
+            border: 10px solid transparent;
+            border-bottom: 10px solid white;
+            position: absolute;
+            margin-top: -35px;
+            margin-left: 87px;
+        }
+        .authicon {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+        }
+        .googleicon {
+            background: url(../img/search.svg);
+        }
+        .vkicon {
+            background: url(../img/vk.svg);
+        }
+        .socialicons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        form {
+            flex-direction: column;
+            align-items: center;
+            div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10px;
+            }
+            a {
+                margin-right: 10px;
+            }
+        }
+        .socialauth {
+            margin-top: 15px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            border-radius: 15px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 100%;
+            outline: none;
+            transition: all 0.1s ease-in-out;
+            &:focus {
+                border-color: #aaa;
+            }
+        }
+        input:nth-of-type(2) {
+            margin-top: 10px;
+        }
+        input[type="button"] {
+            border: none;
+            padding: 8px 13px;
+            border-radius: 15px;
+            outline: none;
+            background: #2855A8;
+            color: white;
+            cursor: pointer;
+            transition: all 0.1s ease-in-out;
+            width: 128px;
+            &:hover {
+                filter: brightness(1.3);
+            }
+        }
+        a {
+            color: black;
+            font-size: 14px;
+        }
+    }
 }
 
 header {
@@ -49,7 +145,7 @@ header {
     justify-content: left;
     align-items: center;
     height: 70px;
-    a:nth-of-type(2) {
+    a {
         margin-left: 25px;
     }
     .logo {
@@ -216,7 +312,7 @@ header {
     .logo {
         margin-left: 0 !important;
     }
-    .login {
+    .loginbox {
         margin-right: 25px;
         display: none;
     }

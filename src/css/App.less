@@ -27,7 +27,7 @@ a {
 }
 
 .login {
-    margin-right: 14px;
+    margin-right: 35px;
     margin-left: 13px;
 }
 
@@ -35,19 +35,24 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    a {
+        color: white;
+        &:hover {
+            color: white;
+        }
+    }
 }
 
 .menu {
     display: flex;
     justify-content: left;
     align-items: center;
-    padding-left: 10px;
-    height: 50px;
-    a:first-of-type {
+    height: 70px;
+    a:nth-of-type(2) {
         margin-left: 25px;
     }
     .logo {
-        background: url(../img/logo.svg);
+        background: url(../img/whitelogo.svg);
         height: 30px;
         width: 90px;
         margin-left: 10px;
@@ -71,6 +76,8 @@ header {
     background-size: cover;
     background-position: center;
     padding: 30px;
+    margin-top: -70px;
+    padding-top: 70px;
     .search {
         background: white;
         padding: 2px;
@@ -111,6 +118,7 @@ header {
         max-width: 600px;
         margin-top: 5px;
         font-size: 13px;
+        margin-left: 34px;
         a {
             font: inherit;
             color: #efefef;
@@ -131,6 +139,42 @@ header {
     }
     h2 {
         font-size: 20px;
-        margin-bottom: 20px;
+    }
+    h2:nth-of-type(1) {
+        margin-bottom: 25px;
+    }
+    h2:nth-of-type(2) {
+        margin-top: 15px;
+        margin-bottom: 17px;
+    }
+    .addservice {
+        color: white;
+        margin-left: 0;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .description {
+        background-size: auto 100%;
+    }
+}
+
+@media screen and (max-width: 452px) {
+    .description {
+        h1 {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 15px;
+        }
+    }
+    .logo {
+        margin-left: 0 !important;
+    }
+    .login {
+        margin-right: 25px;
     }
 }

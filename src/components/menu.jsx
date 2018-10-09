@@ -14,10 +14,10 @@ const menuLinks = [
 
 export default class Menu extends Component {
   render() {
-    return (<div className="menu">
-              <div className="logo"></div>
+    return (<section className="menu">
+              <a href="/"><div className="logo"></div></a>
               { this.getMenuLinks() }
-            </div>);
+            </section>);
   }
   getMenuLinks() {
     let menu = menuLinks.map((val, i) => {

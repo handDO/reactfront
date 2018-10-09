@@ -14,6 +14,7 @@ a {
   margin-left: 20px;
   color: #0f4191;
   transition: all 0.1s ease-in-out;
+  cursor: pointer;
 }
 a:hover {
   color: black;
@@ -57,7 +58,7 @@ header a:hover {
   width: 200px;
   height: 68px;
 }
-.description {
+.searchbox {
   width: 100%;
   height: 500px;
   display: flex;
@@ -70,8 +71,9 @@ header a:hover {
   padding: 30px;
   margin-top: -70px;
   padding-top: 70px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
 }
-.description .search {
+.searchbox .search {
   background: white;
   padding: 2px;
   border-radius: 15px;
@@ -81,7 +83,7 @@ header a:hover {
   justify-content: spa;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 }
-.description .search input[type="text"] {
+.searchbox .search input[type="text"] {
   width: 100%;
   border: none;
   padding: 15px;
@@ -89,10 +91,10 @@ header a:hover {
   outline: none;
   color: #404040;
 }
-.description .search input[type="text"]:focus {
+.searchbox .search input[type="text"]:focus {
   color: black;
 }
-.description .search input[type="button"] {
+.searchbox .search input[type="button"] {
   border: none;
   padding: 15px 20px;
   border-radius: 15px;
@@ -102,10 +104,10 @@ header a:hover {
   cursor: pointer;
   transition: all 0.1s ease-in-out;
 }
-.description .search input[type="button"]:hover {
+.searchbox .search input[type="button"]:hover {
   filter: brightness(1.3);
 }
-.description .example {
+.searchbox .example {
   color: #efefef;
   width: 100%;
   max-width: 600px;
@@ -113,50 +115,89 @@ header a:hover {
   font-size: 13px;
   margin-left: 34px;
 }
-.description .example a {
+.searchbox .example a {
   font: inherit;
   color: #efefef;
   margin-left: 0px;
   text-decoration: underline;
 }
-.description .example a:hover {
+.searchbox .example a:hover {
   color: white;
 }
-.description h1,
-.description h2 {
+.searchbox h1,
+.searchbox h2 {
   color: white;
   text-align: center;
-}
-.description h1 {
   font-size: 45px;
 }
-.description h2 {
+.searchbox h2 {
   font-size: 20px;
 }
-.description h2:nth-of-type(1) {
+.searchbox h2:nth-of-type(1) {
   margin-bottom: 25px;
 }
-.description h2:nth-of-type(2) {
+.searchbox h2:nth-of-type(2) {
   margin-top: 15px;
   margin-bottom: 17px;
 }
-.description .addservice {
+.searchbox .addservice {
   color: white;
   margin-left: 0;
   font-size: 16px;
   text-align: center;
 }
+.categoriesbox {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.categoriesbox .categories {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  justify-content: space-between;
+}
+.categoriesbox .categories .category {
+  width: 321px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 16px;
+  padding-left: 60px;
+  margin: 0;
+}
+.categoriesbox .categories .category:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background: url(../img/cats.svg);
+  background-position: 0 0;
+  position: absolute;
+  margin: 10px 0 0 -60px;
+}
+.categoriesbox .categories a {
+  color: black;
+}
+.categoriesbox h1 {
+  font-size: 25px;
+  text-align: center;
+}
+.categoriesbox .allcatsbut {
+  font-size: 25px;
+  margin-top: 40px;
+}
 @media screen and (max-width: 750px) {
-  .description {
+  .searchbox {
     background-size: auto 100%;
   }
 }
-@media screen and (max-width: 452px) {
-  .description h1 {
+@media screen and (max-width: 469px) {
+  .searchbox h1 {
     font-size: 35px;
     margin-bottom: 10px;
   }
-  .description h2 {
+  .searchbox h2 {
     font-size: 15px;
   }
   .logo {
@@ -164,5 +205,6 @@ header a:hover {
   }
   .login {
     margin-right: 25px;
+    display: none;
   }
 }

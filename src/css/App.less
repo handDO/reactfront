@@ -16,6 +16,7 @@ a {
     margin-left: 20px;
     color: #0f4191;
     transition: all 0.1s ease-in-out;
+    cursor: pointer;
     &:hover {
         color: black;
         text-decoration: underline;
@@ -65,7 +66,7 @@ header {
     height: 68px;
 }
 
-.description {
+.searchbox {
     width: 100%;
     height: 500px;
     display: flex;
@@ -78,6 +79,7 @@ header {
     padding: 30px;
     margin-top: -70px;
     padding-top: 70px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
     .search {
         background: white;
         padding: 2px;
@@ -133,8 +135,6 @@ header {
     h2 {
         color: white;
         text-align: center;
-    }
-    h1 {
         font-size: 45px;
     }
     h2 {
@@ -155,14 +155,56 @@ header {
     }
 }
 
+.categoriesbox {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .categories {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        justify-content: space-between;
+        .category {
+            width: 321px;
+            height: 70px;
+            line-height: 70px;
+            font-size: 16px;
+            padding-left: 60px;
+            margin: 0;
+            &:before {
+                content: '';
+                width: 50px;
+                height: 50px;
+                background: url(../img/cats.svg);
+                background-position: 0 0;
+                position: absolute;
+                margin: 10px 0 0 -60px;
+            }
+        }
+        a {
+            color: black;
+        }
+    }
+    h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+    .allcatsbut {
+        font-size: 25px;
+        margin-top: 40px;
+    }
+}
+
 @media screen and (max-width: 750px) {
-    .description {
+    .searchbox {
         background-size: auto 100%;
     }
 }
 
-@media screen and (max-width: 452px) {
-    .description {
+@media screen and (max-width: 469px) {
+    .searchbox {
         h1 {
             font-size: 35px;
             margin-bottom: 10px;
@@ -176,5 +218,6 @@ header {
     }
     .login {
         margin-right: 25px;
+        display: none;
     }
 }

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-export default class Description extends Component {
+export default class Search extends Component {
   render() {
     return (
-      <section className="description">
+      <section className="searchbox">
         <h1>Поможем найти надёжного исполнителя</h1>
         <h2>для любых задач в г. Сыктывкар</h2>
         <div className="search">

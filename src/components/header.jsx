@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Menu from './menu';
+import Menu from './mainpage/menu';
 
 export default class Header extends Component {
   render() {

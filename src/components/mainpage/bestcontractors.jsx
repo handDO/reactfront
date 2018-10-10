@@ -35,6 +35,7 @@ export default class BestContractors extends Component {
             </section>
       );
   }
+
   getContractors() {
     return contractors.map((val, i) => {
       return (<div key={i} className="contractor">

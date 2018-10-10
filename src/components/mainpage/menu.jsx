@@ -7,7 +7,7 @@ const menuLinks = [
   },
   {
     "name": "Исполнители",
-    "link": "/persons"
+    "link": "/contractors"
   }
 ];
 

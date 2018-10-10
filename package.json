@@ -6,8 +6,9 @@
         "react": "^16.5.2",
         "react-dom": "^16.5.2",
         "react-redux": "^5.0.7",
-        "react-router": "^4.3.1",
-        "react-scripts": "2.0.4"
+        "react-router-dom": "^4.3.1",
+        "react-scripts": "2.0.4",
+        "react-transition-group": "^2.5.0"
     },
     "scripts": {
         "start": "react-scripts start",
@@ -18,18 +19,25 @@
     "eslintConfig": {
         "extends": "react-app"
     },
-    "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ],
     "devDependencies": {
         "esformatter-jsx": "^8.0.1"
     },
     "esformatter": {
-        "plugins": ["esformatter-jsx"],
+        "plugins": [
+            "esformatter-jsx"
+        ],
         "jsx": {
             "formatJSXExpressions": true,
             "JSXExpressionsSingleLine": true,
             "formatJSX": true,
             "attrsOnSameLineAsTag": true,
-            "maxAttrsOnTag": 1,
+            "maxAttrsOnTag": 4,
             "firstAttributeOnSameLine": false,
             "spaceInJSXExpressionContainers": " ",
             "alignWithFirstAttribute": true,

@@ -22,7 +22,7 @@ export default class Categories extends Component {
     <div className="categories">
         {this.getCats()}
     </div>
-    <a href="/projects" className="allcatsbut">Все категории</a>
+    <a href="/contractors" className="allcatsbut">Все категории</a>
      </section>);
   }
 

@@ -1,0 +1,116 @@
+header.projectheader {
+  border-bottom: 1px solid #efefef;
+}
+header.projectheader a {
+  color: black;
+}
+header.projectheader .menu .logo {
+  background: url(../../../img/logo.svg);
+}
+header.projectheader .login:after {
+  background: url(../../../img/down-arrow-black.svg) 0 / 100%;
+}
+.loginform-enter {
+  opacity: 0.01;
+  transform: translateY(20px);
+}
+.loginform-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.loginform-exit {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.loginform-exit-active {
+  opacity: 0.01;
+  transform: translateY(20px);
+}
+.projectsbox {
+  display: flex;
+  padding: 40px;
+}
+.projectsbox .projectsbox__filter {
+  min-width: 280px;
+  padding-right: 20px;
+}
+.projectsbox .projectsbox__filter a {
+  display: block;
+  margin-top: 15px;
+}
+.projectsbox h2 {
+  font-size: 18px;
+}
+.projectsbox .projectsbox__projects {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+.projectsbox .projectsbox__projects h1 {
+  margin-bottom: 20px;
+}
+.projectsbox .projectsbox__project {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #efefef;
+}
+.projectsbox .projectsbox__project:last-of-type {
+  border: none;
+}
+.projectsbox .projectsbox__project .projectsbox__project-title {
+  word-break: break-all;
+  padding-right: 20px;
+}
+.projectsbox .projectsbox__project .projectsbox__project-title a {
+  font-size: 22px;
+  font-weight: 500;
+  color: black;
+}
+.projectsbox .projectsbox__project .projectsbox__project-username a {
+  color: #404040;
+}
+.projectsbox .projectsbox__project .projectsbox__project-rating {
+  margin-left: 13px;
+}
+.projectsbox .projectsbox__project .projectsbox__project-rating:after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background: url(../../../img/star.svg) 0 / 100%;
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 4px;
+}
+.projectsbox .projectsbox__project .projectsbox__project-user {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+.projectsbox .projectsbox__project .projectsbox__project-price {
+  background: #EFCE4A;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 15px;
+  white-space: nowrap;
+  text-align: center;
+}
+.projectsbox .projectsbox__project .projectsbox__project-date {
+  margin-top: 10px;
+  text-align: right;
+  white-space: nowrap;
+}
+@media screen and (max-width: 898px) {
+  .projectsbox {
+    flex-direction: column;
+  }
+  .projectsbox__filter {
+    margin-top: 10px;
+    order: 2;
+  }
+}

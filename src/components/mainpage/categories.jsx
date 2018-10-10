@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
 
 const catNames = [
-  'Уборка', 'Красота и здоровье', 'Ремонт техники', 'Работа по дому', 'Проведение мероприятий', 'Фото и видео', 'Транспортные услуги', 'Образование', 'Уход за животными', 'Юридическая помощь', 'Ремонт и строительство', 'IT, компьютеры'
+  'Уборка',
+  'Красота и здоровье',
+  'Ремонт техники',
+  'Работа по дому',
+  'Проведение мероприятий',
+  'Фото и видео',
+  'Транспортные услуги',
+  'Образование',
+  'Уход за животными',
+  'Юридическая помощь',
+  'Ремонт и строительство',
+  'IT, компьютеры'
 ];
 
 export default class Categories extends Component {
@@ -14,6 +25,7 @@ export default class Categories extends Component {
     <a href="/projects" className="allcatsbut">Все категории</a>
      </section>);
   }
+
   getCats() {
     let cats = catNames.map((val, i) => {
       return (<a href="/" key={i} className="category">{val}</a>);

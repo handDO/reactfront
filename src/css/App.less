@@ -26,6 +26,14 @@ a {
     .login {
         margin-right: 35px;
         margin-left: 13px;
+        &:after {
+            content: '';
+            background: url(../img/down-arrow.svg) 0~"/"100%;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            margin: 6px 0 0 5px;
+        }
     }
     .delimiter {
         min-height: 1px;
@@ -257,6 +265,10 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .allcatsbut {
+        font-size: 25px;
+        margin-top: 40px;
+    }
     .categories {
         display: flex;
         flex-wrap: wrap;
@@ -320,14 +332,91 @@ header {
     }
 }
 
+.bestcontractorsbox {
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    .contractors {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        flex-wrap: wrap;
+        .contractor {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 40px 30px 40px;
+            .contractor_img {
+                border-radius: 100%;
+                height: 150px;
+                img {
+                    border-radius: 100%;
+                    width: 150px;
+                    height: 150px;
+                }
+                &:before {
+                    content: '';
+                    border-radius: 100%;
+                    width: 150px;
+                    height: 150px;
+                    background: rgba(0, 0, 0, 0.2);
+                    position: absolute;
+                    opacity: 0;
+                    transition: all 0.1s ease-in-out;
+                }
+                &:after {
+                    content: 'Профиль';
+                    font-weight: 500;
+                    position: absolute;
+                    margin-left: -108px;
+                    margin-top: 65px;
+                    color: white;
+                    opacity: 0;
+                    transition: all 0.1s ease-in-out;
+                }
+                &:hover {
+                    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+                    &:before {
+                        opacity: 1;
+                    }
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+            .contractor_rating {
+                text-align: center;
+                margin-bottom: 10px;
+                font-size: 16px;
+                &:after {
+                    content: '';
+                    width: 15px;
+                    height: 15px;
+                    background: url(../img/star.svg) 0~"/"100%;
+                    position: absolute;
+                    margin-top: 2px;
+                    margin-left: 4px;
+                }
+            }
+            .contractor_name {
+                font-weight: 500;
+                text-align: center;
+                font-size: 18px;
+                margin-top: 10px;
+            }
+            .contractor_maincategory {
+                text-align: center;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
 h1 {
     font-size: 25px;
     text-align: center;
-}
-
-.allcatsbut {
-    font-size: 25px;
-    margin-top: 40px;
 }
 
 @media screen and (max-width: 750px) {

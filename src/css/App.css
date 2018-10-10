@@ -23,6 +23,14 @@ a:hover {
   margin-right: 35px;
   margin-left: 13px;
 }
+.loginbox .login:after {
+  content: '';
+  background: url(../img/down-arrow.svg) 0 / 100%;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  margin: 6px 0 0 5px;
+}
 .loginbox .delimiter {
   min-height: 1px;
   width: 300px;
@@ -249,6 +257,10 @@ header a:hover {
   justify-content: center;
   align-items: center;
 }
+.categoriesbox .allcatsbut {
+  font-size: 25px;
+  margin-top: 40px;
+}
 .categoriesbox .categories {
   display: flex;
   flex-wrap: wrap;
@@ -310,13 +322,90 @@ header a:hover {
 .categoriesbox a {
   color: black;
 }
+.bestcontractorsbox {
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+.bestcontractorsbox .contractors {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+.bestcontractorsbox .contractors .contractor {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 40px 30px 40px;
+}
+.bestcontractorsbox .contractors .contractor .contractor_img {
+  border-radius: 100%;
+  height: 150px;
+}
+.bestcontractorsbox .contractors .contractor .contractor_img img {
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+}
+.bestcontractorsbox .contractors .contractor .contractor_img:before {
+  content: '';
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  opacity: 0;
+  transition: all 0.1s ease-in-out;
+}
+.bestcontractorsbox .contractors .contractor .contractor_img:after {
+  content: 'Профиль';
+  font-weight: 500;
+  position: absolute;
+  margin-left: -108px;
+  margin-top: 65px;
+  color: white;
+  opacity: 0;
+  transition: all 0.1s ease-in-out;
+}
+.bestcontractorsbox .contractors .contractor .contractor_img:hover {
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+.bestcontractorsbox .contractors .contractor .contractor_img:hover:before {
+  opacity: 1;
+}
+.bestcontractorsbox .contractors .contractor .contractor_img:hover:after {
+  opacity: 1;
+}
+.bestcontractorsbox .contractors .contractor .contractor_rating {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.bestcontractorsbox .contractors .contractor .contractor_rating:after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background: url(../img/star.svg) 0 / 100%;
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 4px;
+}
+.bestcontractorsbox .contractors .contractor .contractor_name {
+  font-weight: 500;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.bestcontractorsbox .contractors .contractor .contractor_maincategory {
+  text-align: center;
+  margin-top: 5px;
+}
 h1 {
   font-size: 25px;
   text-align: center;
-}
-.allcatsbut {
-  font-size: 25px;
-  margin-top: 40px;
 }
 @media screen and (max-width: 750px) {
   .searchbox {

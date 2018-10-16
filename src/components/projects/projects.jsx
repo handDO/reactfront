@@ -56,7 +56,14 @@ const catNames = [
 ];
 
 export default class Projects extends Component {
-  getProjects() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      catsOpen: true
+    }
+  }
+
+  getProjects = () => {
     return proj.map((val, i) => (
       <div key={i} className="projectsbox__project">
         <div>
@@ -76,25 +83,41 @@ export default class Projects extends Component {
     ));
   }
 
-  getCats() {
+  getCats = () => {
     let cats = catNames.map((val, i) => {
       return (<a href="/" key={i} className="category">{val}</a>);
     });
     return cats;
   }
 
+  closeCats = (e) => {
+    this.setState(
+      {
+        catsOpen: !this.state.catsOpen
+      }
+    );
+
+  }
+
+
   render() {
     return (
       <section className="projectsbox wrapper">
-
-      <div className="projectsbox__filter"><h2>Категории</h2>
-      {this.getCats()}</div>
-      <div className="projectsbox__projects">
-      <h1>
-          Найдено 192 заказа
-      </h1>
-      {this.getProjects()}
+        <div className="projectsbox__filter" style={{
+        display: (this.state.catsOpen) ? 'block' : 'none'
+      }}>
+          <h2>Категории</h2>
+          {this.getCats()}
+          <div className="projectsbox__filter-close" onClick={this.closeCats}></div>
+        </div>
+        <div className="projectsbox__projects">
+        <h1>
+            Найдено 192 заказа
+        </h1>
+        {this.getProjects()}
+        
       </div>
+      <div className="projectsbox__filterbutton">Категории</div>
       </section>
       );
   }

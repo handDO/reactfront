@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 const menuLinks = [
   {
@@ -15,15 +16,15 @@ const menuLinks = [
 export default class Menu extends Component {
   render() {
     return (<section className="menu">
-              <a href="/"><div className="logo"></div></a>
+              <Link to="/"><div className="logo"></div></Link>
               { this.getMenuLinks() }
             </section>);
   }
   getMenuLinks() {
     let menu = menuLinks.map((val, i) => {
-      return (<a key={i} href={val.link}>
+      return (<Link key={i} to={val.link}>
                 { val.name }
-              </a>);
+              </Link>);
     });
     return menu;
   }

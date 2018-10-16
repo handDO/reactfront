@@ -48,6 +48,7 @@ a:hover {
   background: white;
 }
 .loginbox .loginform {
+  z-index: 2;
   position: absolute;
   background: white;
   border-radius: 15px;

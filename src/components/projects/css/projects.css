@@ -135,6 +135,7 @@ header.projectheader .login:after {
 }
 @media screen and (max-width: 898px) {
   .projectsbox {
+    margin-bottom: 30px;
     flex-direction: column;
   }
   .projectsbox .projectsbox__project .projectsbox__project-title a {

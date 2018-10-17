@@ -59,7 +59,7 @@ export default class Projects extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      catsOpen: true
+      catsOpen: false
     }
   }
 
@@ -117,7 +117,7 @@ export default class Projects extends Component {
         {this.getProjects()}
         
       </div>
-      <div className="projectsbox__filterbutton">Категории</div>
+      <div className="projectsbox__filterbutton" onClick={this.closeCats}>Категории</div>
       </section>
       );
   }

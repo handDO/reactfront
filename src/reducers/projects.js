@@ -1,3 +1,7 @@
+import {
+    TOGGLE_CATEGORIES
+} from '../actions';
+
 const projectsInititalState = {
     isCategoriesOpen: false,
     projects: [{
@@ -54,7 +58,15 @@ const projectsInititalState = {
 }
 
 const projectsReducer = (state = projectsInititalState, action) => {
-    return state;
+    switch (action.type) {
+        case TOGGLE_CATEGORIES:
+            return {
+                ...state,
+                isCategoriesOpen: !state.isCategoriesOpen
+            }
+        default:
+            return state;
+    }
 }
 
 export default projectsReducer;

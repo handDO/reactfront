@@ -2,13 +2,6 @@ import React, { Component } from 'react';
 import './css/projects.css';
 
 export default class Projects extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      catsOpen: false
-    }
-  }
-
   getProjects = () => {
     return this.props.projects.map((val, i) => (
       <div key={ i } className="projectsbox__project">
@@ -53,16 +46,6 @@ export default class Projects extends Component {
     return cats;
   }
 
-  closeCats = (e) => {
-    this.setState(
-      {
-        catsOpen: !this.state.catsOpen
-      }
-    );
-
-  }
-
-
   render() {
     return (
       <section className="projectsbox wrapper">
@@ -71,13 +54,13 @@ export default class Projects extends Component {
  } }>
               <h2>Категории</h2>
               { this.getCats() }
-              <div className="projectsbox__filter-close" onClick={ this.closeCats }></div>
+              <div className="projectsbox__filter-close" onClick={ this.props.toggleCategories }></div>
           </div>
           <div className="projectsbox__projects">
               <h1>Найдено 192 заказа</h1>
               { this.getProjects() }
           </div>
-          <div className="projectsbox__filterbutton" onClick={ this.closeCats }>Категории</div>
+          <div className="projectsbox__filterbutton" onClick={ this.props.toggleCategories }>Категории</div>
       </section>
       );
   }

@@ -10,22 +10,6 @@ header.projectheader .menu .logo {
 header.projectheader .login:after {
   background: url(../../../img/down-arrow-black.svg) 0 / 100%;
 }
-.loginform-enter {
-  opacity: 0.01;
-  transform: translateY(20px);
-}
-.loginform-enter-active {
-  opacity: 1;
-  transform: translateY(0px);
-}
-.loginform-exit {
-  opacity: 1;
-  transform: translateY(0px);
-}
-.loginform-exit-active {
-  opacity: 0.01;
-  transform: translateY(20px);
-}
 .projectsbox {
   display: flex;
   padding: 40px;

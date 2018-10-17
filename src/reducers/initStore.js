@@ -3,9 +3,11 @@ import {
 } from 'redux';
 
 import headerReducer from '../reducers/header';
+import projectsReducer from '../reducers/projects';
 
 const initStore = combineReducers({
-    headerReducer
+    headerReducer,
+    projectsReducer
 });
 
 export default initStore;

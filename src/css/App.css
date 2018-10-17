@@ -410,6 +410,22 @@ h1 {
   font-size: 25px;
   text-align: center;
 }
+.loginform-enter {
+  opacity: 0.01;
+  transform: scale(0.95) translateY(20px);
+}
+.loginform-enter-active {
+  opacity: 1;
+  transform: scale(1) translateY(0px);
+}
+.loginform-exit {
+  opacity: 1;
+  transform: scale(1) translateY(0px);
+}
+.loginform-exit-active {
+  opacity: 0.01;
+  transform: scale(0.95) translateY(20px);
+}
 @media screen and (max-width: 750px) {
   .searchbox {
     background-size: auto 100%;

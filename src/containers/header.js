@@ -6,9 +6,9 @@ import Header from '../components/header';
 
 import * as Actions from '../actions';
 
-const toggleAuthForm = (e, open) => {
+const toggleAuthForm = (e) => {
     e.preventDefault();
-    return Actions.toggleAuthForm(open);
+    return Actions.toggleAuthForm();
 }
 
 const mapState = state => {
@@ -18,7 +18,7 @@ const mapState = state => {
 };
 
 const mapDispatch = dispatch => ({
-    toggleAuthForm: (e, open) => dispatch(toggleAuthForm(e, open))
+    toggleAuthForm: e => dispatch(toggleAuthForm(e))
 });
 
 export default connect(mapState, mapDispatch)(Header);

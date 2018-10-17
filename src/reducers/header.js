@@ -11,7 +11,7 @@ const headerReducer = (state = headerInititalState, action) => {
         case TOGGLE_AUTH_FORM:
             return {
                 ...state,
-                authFormIsOpen: action.payload
+                authFormIsOpen: !state.authFormIsOpen
             }
         default:
             return state;

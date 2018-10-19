@@ -28,7 +28,7 @@ header.projectheader {
             margin-top: 15px;
         }
     }
-    .projectsbox__filterbutton {
+    .projectsbox__filter-button {
         background: #0f4191;
         border-radius: 30px;
         box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
@@ -38,10 +38,12 @@ header.projectheader {
         bottom: 20px;
         cursor: pointer;
         width: 120px;
+        height: 60px;
         text-align: center;
-        transition: all 0.1s ease-in-out;
+        transition: all 0.2s ease-in-out;
         left: ~"calc(50vw - 60px)";
         display: none;
+        z-index: 3;
         &:active {
             filter: brightness(1.3);
         }
@@ -151,11 +153,11 @@ header.projectheader {
             background: white;
             z-index: 1;
             padding: 20px;
-            overflow: overlay;
+            overflow: auto;
             box-sizing: border-box;
             opacity: 0;
+            transform: translateY(40px);
             pointer-events: none;
-            transition: all 0.2s ease-in-out;
             h2 {
                 text-align: center;
                 margin-left: -20px;
@@ -174,37 +176,50 @@ header.projectheader {
                 margin-top: 0px;
             }
         }
-        .projectsbox__filterbutton {
+        .projectsbox__filter-button {
             display: block;
+        }
+        .projectsbox__filter-button-active {
+            left: ~"calc(100vw - 80px)";
+            width: 60px;
+            &:after {
+                content: '';
+                width: 2px;
+                height: 20px;
+                background: #fff;
+                position: absolute;
+                transform: rotateZ(45deg);
+            }
+            &:before {
+                content: '';
+                width: 2px;
+                height: 20px;
+                background: #fff;
+                position: absolute;
+                transform: rotateZ(-45deg);
+            }
         }
     }
 }
 
 .projectsbox {
-    .projectsbox__filter-enter {
-        opacity: 0.01; // transform: translateY(40px);
-    }
     .projectsbox__filter-enter-active {
-        opacity: 1; // transform: translateY(0px);
+        opacity: 1;
+        transform: translateY(0px);
+        transition: all .2s ease-in-out;
     }
     .projectsbox__filter-enter-done {
         opacity: 1;
         pointer-events: auto;
+        transform: translateY(0px);
     }
     .projectsbox__filter-exit {
         opacity: 1;
         transform: translateY(0px);
+        transition: all .2s ease-in-out;
     }
     .projectsbox__filter-exit-active {
         opacity: 0.01;
         transform: translateY(40px);
     }
 }
-
-// @media screen and (min-width:899px) {
-//     .projectsbox {
-//         .projectsbox__filter {
-//             // opacity: 1 !important;
-//         }
-//     }
-// }

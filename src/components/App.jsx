@@ -2,10 +2,8 @@ import React, { Fragment, PureComponent } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import '../css/App.css';
 import Header from '../containers/Header';
-import Search from './mainpage/search';
-import Categories from './mainpage/categories';
-import BestContractors from './mainpage/bestcontractors';
 import Projects from '../containers/Projects';
+import Mainpage from '../components/mainpage/mainpage';
 
 class App extends PureComponent {
   render() {
@@ -13,9 +11,7 @@ class App extends PureComponent {
                 <Switch>
                     <Route exact path="/" render={ props => <Fragment>
                                                                 <Header/>
-                                                                <Search/>
-                                                                <Categories/>
-                                                                <BestContractors/>
+                                                                <Mainpage/>
                                                             </Fragment> } />
                     <Route path="/projects" render={ props => <Fragment>
                                                                   <Header class="projectheader" />

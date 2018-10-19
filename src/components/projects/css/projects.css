@@ -141,7 +141,9 @@ header.projectheader .login:after {
     padding: 20px;
     overflow: overlay;
     box-sizing: border-box;
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
   }
   .projectsbox .projectsbox__filter h2 {
     text-align: center;
@@ -164,8 +166,21 @@ header.projectheader .login:after {
     display: block;
   }
 }
-@media screen and (min-width: 899px) {
-  .projectsbox .projectsbox__filter {
-    display: block !important;
-  }
+.projectsbox .projectsbox__filter-enter {
+  opacity: 0.01;
+}
+.projectsbox .projectsbox__filter-enter-active {
+  opacity: 1;
+}
+.projectsbox .projectsbox__filter-enter-done {
+  opacity: 1;
+  pointer-events: auto;
+}
+.projectsbox .projectsbox__filter-exit {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.projectsbox .projectsbox__filter-exit-active {
+  opacity: 0.01;
+  transform: translateY(40px);
 }

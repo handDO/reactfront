@@ -425,11 +425,13 @@ h1 {
 .loginform-enter {
     opacity: 0.01;
     transform: scale(.95) translateY(20px);
+    pointer-events: unset;
 }
 
 .loginform-enter-active {
     opacity: 1;
-    transform: scale(1) translateY(0px); // transition: all 300ms ease-out;
+    transform: scale(1) translateY(0px);
+    pointer-events: unset;
 }
 
 .loginform-exit {
@@ -439,7 +441,7 @@ h1 {
 
 .loginform-exit-active {
     opacity: 0.01;
-    transform: scale(.95) translateY(20px); // transition: all 300ms ease-out;
+    transform: scale(.95) translateY(20px);
 }
 
 @media screen and (max-width: 750px) {

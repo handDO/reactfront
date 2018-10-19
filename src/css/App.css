@@ -413,10 +413,12 @@ h1 {
 .loginform-enter {
   opacity: 0.01;
   transform: scale(0.95) translateY(20px);
+  pointer-events: unset;
 }
 .loginform-enter-active {
   opacity: 1;
   transform: scale(1) translateY(0px);
+  pointer-events: unset;
 }
 .loginform-exit {
   opacity: 1;

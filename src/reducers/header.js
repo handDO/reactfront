@@ -1,9 +1,11 @@
 import {
-    TOGGLE_AUTH_FORM
+    TOGGLE_AUTH_FORM,
+    TOGGLE_MENU
 } from '../actions';
 
 const headerInititalState = {
-    authFormIsOpen: false
+    authFormIsOpen: false,
+    menuIsOpen: false
 }
 
 const headerReducer = (state = headerInititalState, action) => {
@@ -12,6 +14,11 @@ const headerReducer = (state = headerInititalState, action) => {
             return {
                 ...state,
                 authFormIsOpen: !state.authFormIsOpen
+            }
+        case TOGGLE_MENU:
+            return {
+                ...state,
+                menuIsOpen: !state.menuIsOpen
             }
         default:
             return state;

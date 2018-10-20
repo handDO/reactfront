@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Menu from './mainpage/menu';
+import Menu from '../containers/Menu';
 import AuthForm from './authform';
 import { CSSTransition } from 'react-transition-group';
 

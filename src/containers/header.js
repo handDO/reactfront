@@ -13,7 +13,8 @@ const toggleAuthForm = (e) => {
 
 const mapState = state => {
     return {
-        authFormIsOpen: state.headerReducer.authFormIsOpen
+        authFormIsOpen: state.headerReducer.authFormIsOpen,
+        menuIsOpen: state.headerReducer.menuIsOpen
     }
 };
 

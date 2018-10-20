@@ -1,18 +1,21 @@
-@import (once) "../../../css/variables.less";
+//out: ../css/projects.css
+@import (once) "./variables.less";
 header.projectheader {
     // box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid #efefef;
+    width: 100%;
+    background: white;
     a {
         color: black;
     }
     .menu {
         .logo {
-            background: url(../../../img/logo.svg);
+            background: url(../img/logo.svg);
         }
     }
     .login {
         &:after {
-            background: url(../../../img/down-arrow-black.svg) 0~"/"100%;
+            background: url(../img/down-arrow-black.svg) 0~"/"100%;
         }
     }
 }
@@ -99,7 +102,7 @@ header.projectheader {
                 content: '';
                 width: 15px;
                 height: 15px;
-                background: url(../../../img/star.svg) 0~"/"100%;
+                background: url(../img/star.svg) 0~"/"100%;
                 position: absolute;
                 margin-top: 2px;
                 margin-left: 4px;
@@ -120,18 +123,17 @@ header.projectheader {
             text-align: center;
         }
         .projectsbox__project-date {
-            margin-top: 10px;
-            text-align: right;
-            white-space: nowrap;
             &:before {
-                content: '';
-                background: url(../../../img/clock-circular-outline.svg) 0~"/"100%;
+                background: url(../img/clock-circular-outline.svg) no-repeat 0~"/"100%;
                 width: 15px;
                 height: 15px;
                 margin-left: -20px;
                 margin-top: 3px;
                 position: absolute;
             }
+            margin-top: 10px;
+            text-align: right;
+            white-space: nowrap;
         }
     }
 }
@@ -177,7 +179,7 @@ header.projectheader {
                 display: none;
             }
             .projectsbox__filter-close {
-                background: url(../../../img/close-button.svg) no-repeat 0~"/"100%;
+                background: url(../img/close-button.svg) no-repeat 0~"/"100%;
                 width: 20px;
                 height: 20px;
                 position: fixed;

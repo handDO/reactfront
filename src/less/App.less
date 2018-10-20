@@ -1,4 +1,8 @@
+//out: ../css/App.css
 @import (once) "./variables.less";
+@import (once) "../less/fontawesome.less";
+@import (once) "../less/solid.less";
+@import (once) "../less/regular.less";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 * {
     box-sizing: border-box;
@@ -30,7 +34,7 @@ a {
 
 .loginbox {
     .login {
-        margin-right: 45px;
+        margin-right: 50px;
         margin-left: 13px;
         &:after {
             content: '';
@@ -168,7 +172,20 @@ header {
         background: url(../img/whitelogo.svg);
         height: 30px;
         width: 90px;
-        margin-left: 10px;
+        margin-left: 40px;
+    }
+    .menu__mobilebarbutton {
+        .fa-icon;
+        .fas;
+        &:after {
+            content: @fa-var-bars;
+            position: absolute;
+            left: 145px;
+            top: 26px;
+            font-size: 21px;
+            cursor: pointer;
+        }
+        display: none;
     }
 }
 
@@ -430,13 +447,11 @@ h1 {
 .loginform-enter {
     opacity: 0.01;
     transform: scale(.95) translateY(20px);
-    pointer-events: unset;
 }
 
 .loginform-enter-active {
     opacity: 1;
     transform: scale(1) translateY(0px);
-    pointer-events: unset;
 }
 
 .loginform-exit {
@@ -465,11 +480,60 @@ h1 {
             font-size: 15px;
         }
     }
-    .logo {
-        margin-left: 0 !important;
-    }
     .loginbox {
-        margin-right: 25px;
-        display: none;
+        margin-right: 0px;
     }
+    .menu {
+        .menu__mobilebarbutton {
+            display: block;
+        }
+    }
+    .menu__links {
+        position: absolute;
+        background: #fff;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        margin-top: 80px;
+        margin-left: 81px;
+        border-radius: 15px; // display: none;
+        opacity: 0;
+        transform: scale(.95) translateY(20px);
+        pointer-events: none;
+        a {
+            display: block;
+            padding: 10px;
+            margin: 0;
+        }
+        &:before {
+            content: '';
+            border: 10px solid transparent;
+            border-bottom: 10px solid white;
+            position: absolute;
+            margin-top: -30px;
+            margin-left: 54px;
+        }
+    }
+}
+
+.menu__links-enter-active {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+    transition: all 0.1s ease-in-out;
+}
+
+.menu__links-enter-done {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+    pointer-events: unset;
+}
+
+.menu__links-exit {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+    transition: all 0.1s ease-in-out;
+}
+
+.menu__links-exit-active {
+    opacity: 0.01;
+    transform: scale(.95) translateY(20px);
 }

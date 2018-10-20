@@ -39,6 +39,33 @@ const projectsInititalState = {
             title: "Написать курсовую работу за 4 курс",
             price: "2000 руб.",
             before_date: new Date(2018, 11, 30)
+        },
+        {
+            id: 1,
+            user_id: 2,
+            user_rating: 119,
+            user_name: "Василий",
+            title: "Нужно собрать поликарбонатную теплицу",
+            price: "до 5000 руб.",
+            before_date: new Date(2018, 10, 21)
+        },
+        {
+            id: 1,
+            user_id: 2,
+            user_rating: 119,
+            user_name: "Василий",
+            title: "Нужно собрать поликарбонатную теплицу",
+            price: "до 5000 руб.",
+            before_date: new Date(2018, 10, 21)
+        },
+        {
+            id: 1,
+            user_id: 2,
+            user_rating: 119,
+            user_name: "Василий",
+            title: "Нужно собрать поликарбонатную теплицу",
+            price: "до 5000 руб.",
+            before_date: new Date(2018, 10, 21)
         }
     ],
     categories: [

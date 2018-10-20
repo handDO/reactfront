@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/projects.css';
+import '../../css/projects.css';
 import { CSSTransition } from 'react-transition-group';
 
 export default class Projects extends Component {
@@ -10,7 +10,7 @@ export default class Projects extends Component {
   render() {
     return (
       <section className="projectsbox wrapper">
-          <CSSTransition in={ this.props.isCategoriesOpen } timeout={ 1000 } classNames='projectsbox__filter'>
+          <CSSTransition in={ this.props.isCategoriesOpen } timeout={ 200 } classNames='projectsbox__filter'>
               <div className="projectsbox__filter">
                   <h2>Категории</h2>
                   { this.props.getCats(this.props.categories) }

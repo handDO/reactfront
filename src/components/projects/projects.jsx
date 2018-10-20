@@ -4,7 +4,7 @@ import { CSSTransition } from 'react-transition-group';
 
 export default class Projects extends Component {
   componentDidMount() {
-    document.title = 'HandDO - Проекты';
+    document.title = 'HandDO - Заказы';
   }
 
   render() {
@@ -19,6 +19,7 @@ export default class Projects extends Component {
           <div className="projectsbox__projects">
               <h1>Найдено 192 заказа</h1>
               { this.props.getProjects(this.props.projects) }
+              <a href="/projects" className="projectsbox__projects-loadmore">Показать ещё</a>
           </div>
           <div className={ `projectsbox__filter-button ${(this.props.isCategoriesOpen) ? 'projectsbox__filter-button-active' : ''}` } onClick={ this.props.toggleCategories }>
               { (this.props.isCategoriesOpen) ? '' : 'Категории' }

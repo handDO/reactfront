@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 
 const menuLinks = [
@@ -16,7 +16,7 @@ const menuLinks = [
 export default class Menu extends Component {
   render() {
     return (<section className="menu">
-                <Link to="/" className="logo"></Link>
+                <NavLink to="/" className="logo" activeClassName="menu__linkactive" exact></NavLink>
                 <div className="menu__mobilebarbutton" onClick={ this.props.toggleMenu }></div>
                 <CSSTransition in={ this.props.menuIsOpen } timeout={ 200 } classNames="menu__links">
                     <div className="menu__links">
@@ -28,9 +28,9 @@ export default class Menu extends Component {
 
   getMenuLinks() {
     let menu = menuLinks.map((val, i) => {
-      return (<Link key={ i } className="menu__link" to={ val.link }>
+      return (<NavLink key={ i } to={ val.link } className="menu__link" activeClassName="menu__linkactive">
                   { val.name }
-              </Link>);
+              </NavLink>);
     });
     return menu;
   }

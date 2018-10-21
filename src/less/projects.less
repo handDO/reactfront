@@ -1,5 +1,8 @@
 //out: ../css/projects.css
 @import (once) "./variables.less";
+@import (once) "../less/fontawesome.less";
+@import (once) "../less/solid.less";
+@import (once) "../less/regular.less";
 header.projectheader {
     // box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid #efefef;
@@ -123,13 +126,15 @@ header.projectheader {
             text-align: center;
         }
         .projectsbox__project-date {
-            &:before {
-                background: url(../img/clock-circular-outline.svg) no-repeat 0~"/"100%;
-                width: 15px;
-                height: 15px;
-                margin-left: -20px;
-                margin-top: 3px;
-                position: absolute;
+            i {
+                .fa;
+                .far;
+                &:before {
+                    content: @fa-var-clock;
+                    margin-left: -20px;
+                    margin-top: -12px;
+                    position: absolute;
+                }
             }
             margin-top: 10px;
             text-align: right;
@@ -212,6 +217,22 @@ header.projectheader {
             }
             &:before {
                 transform: rotateZ(-45deg);
+            }
+        }
+    }
+}
+
+.menu__linkactive {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 469px) {
+    header.projectheader {
+        .menu {
+            .menu__mobilebarbutton {
+                display: block;
+                color: black;
             }
         }
     }

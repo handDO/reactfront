@@ -26,7 +26,7 @@ export default class Project extends Component {
               <div className="projectsbox__project-price">
                   { price }
               </div>
-              <div className="projectsbox__project-date">
+              <div className="projectsbox__project-date"><i></i>
                   { `до ${before_date.toLocaleString('ru', {
                       month: 'long',
                       day: 'numeric'

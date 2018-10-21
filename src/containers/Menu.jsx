@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import Menu from '../components/mainpage/menu';
 
@@ -14,4 +15,4 @@ const mapDispatch = dispatch => ({
   toggleMenu: e => dispatch(Actions.toggleMenu())
 });
 
-export default connect(mapState, mapDispatch)(Menu);
+export default withRouter(connect(mapState, mapDispatch)(Menu));

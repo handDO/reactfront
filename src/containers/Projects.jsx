@@ -14,10 +14,12 @@ const mapState = state => ({
   categories: state.projectsReducer.categories,
   isCategoriesOpen: state.projectsReducer.isCategoriesOpen,
   getCats: getCats,
-  getProjects: getProjects
+  getProjects: getProjects,
+  isFetching: state.projectsReducer.isFetching
 });
 
 const mapDispatch = dispatch => ({
-  toggleCategories: e => dispatch(Actions.toggleCategories(e))
+  toggleCategories: e => dispatch(Actions.toggleCategories(e)),
+  fetchOrdersIfNeeded: e => dispatch(Actions.fetchOrdersIfNeeded())
 });
 export default connect(mapState, mapDispatch)(Projects);

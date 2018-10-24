@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import '../css/App.css';
+import 'loaders.css/loaders.min.css';
+
 import Projects from '../containers/Projects';
 import Mainpage from '../components/mainpage';
 import NotFound from '../components/404';

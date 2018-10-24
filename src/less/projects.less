@@ -72,6 +72,10 @@ header.projectheader {
             margin: 0 auto;
             margin-top: 20px;
             color: black;
+            display: none;
+        }
+        .projectsbox__projects-loadmore_visible {
+            display: block;
         }
     }
     .projectsbox__project {
@@ -225,6 +229,30 @@ header.projectheader {
 .menu__link_active {
     // text-decoration: underline;
     font-weight: 700;
+}
+
+.loader-inner {
+    display: none;
+}
+
+.loader-inner_visible {
+    display: block;
+}
+
+.line-scale-party {
+    margin: 20px auto;
+}
+
+.line-scale-party[data-visible="1"] {
+    display: none;
+}
+
+.line-scale-party[data-visible="0"] {
+    display: block;
+}
+
+.line-scale-party>div {
+    background-color: #444 !important;
 }
 
 @media screen and (max-width: 469px) {

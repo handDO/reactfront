@@ -1,73 +1,17 @@
 import {
-    TOGGLE_CATEGORIES
+    TOGGLE_CATEGORIES,
+    GET_ORDERS,
+    REQUEST_ORDERS,
+    RECEIVE_ORDERS
 } from '../actions';
 
 const projectsInititalState = {
     isCategoriesOpen: false,
-    projects: [{
-            id: 1,
-            user_id: 1,
-            user_rating: 154,
-            user_name: "Андрей",
-            title: "Нужен велосипед",
-            price: "до 1000 руб.",
-            before_date: new Date(2018, 9, 10)
-        },
-        {
-            id: 1,
-            user_id: 2,
-            user_rating: 119,
-            user_name: "Василий",
-            title: "Нужно собрать поликарбонатную теплицу",
-            price: "до 5000 руб.",
-            before_date: new Date(2018, 10, 21)
-        },
-        {
-            id: 1,
-            user_id: 1,
-            user_rating: 154,
-            user_name: "Андрей",
-            title: "Написать курсовую работу за 4 курс",
-            price: "2000 руб.",
-            before_date: new Date(2018, 11, 30)
-        },
-        {
-            id: 1,
-            user_id: 1,
-            user_rating: 154,
-            user_name: "Андрей",
-            title: "Написать курсовую работу за 4 курс",
-            price: "2000 руб.",
-            before_date: new Date(2018, 11, 30)
-        },
-        {
-            id: 1,
-            user_id: 2,
-            user_rating: 119,
-            user_name: "Василий",
-            title: "Нужно собрать поликарбонатную теплицу",
-            price: "до 5000 руб.",
-            before_date: new Date(2018, 10, 21)
-        },
-        {
-            id: 1,
-            user_id: 2,
-            user_rating: 119,
-            user_name: "Василий",
-            title: "Нужно собрать поликарбонатную теплицу",
-            price: "до 5000 руб.",
-            before_date: new Date(2018, 10, 21)
-        },
-        {
-            id: 1,
-            user_id: 2,
-            user_rating: 119,
-            user_name: "Василий",
-            title: "Нужно собрать поликарбонатную теплицу",
-            price: "до 5000 руб.",
-            before_date: new Date(2018, 10, 21)
-        }
-    ],
+    isFetching: false,
+    didInvalidate: false,
+    lastOrderID: 0,
+    lastUpdate: Date.now(),
+    projects: [],
     categories: [
         'Уборка',
         'Красота и здоровье',
@@ -90,6 +34,25 @@ const projectsReducer = (state = projectsInititalState, action) => {
             return {
                 ...state,
                 isCategoriesOpen: !state.isCategoriesOpen
+            }
+        case GET_ORDERS:
+            return {
+                ...state,
+                didInvalidate: true
+            }
+        case REQUEST_ORDERS:
+            return {
+                ...state,
+                didInvalidate: false,
+                isFetching: true
+            }
+        case RECEIVE_ORDERS:
+            return {
+                ...state,
+                isFetching: false,
+                lastUpdate: action.receivedAt,
+                lastOrderID: action.orders[action.orders.length - 1].id,
+                projects: action.orders
             }
         default:
             return state;

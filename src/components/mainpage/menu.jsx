@@ -16,7 +16,7 @@ const menuLinks = [
 export default class Menu extends Component {
   render() {
     return (<section className="menu">
-                <NavLink to="/" className="logo" activeClassName="menu__linkactive" exact></NavLink>
+                <NavLink to="/" className="logo" exact></NavLink>
                 <div className="menu__mobilebarbutton" onClick={ this.props.toggleMenu }></div>
                 <CSSTransition in={ this.props.menuIsOpen } timeout={ 200 } classNames="menu__links">
                     <div className="menu__links">
@@ -28,7 +28,7 @@ export default class Menu extends Component {
 
   getMenuLinks() {
     let menu = menuLinks.map((val, i) => {
-      return (<NavLink key={ i } to={ val.link } className="menu__link" activeClassName="menu__linkactive">
+      return (<NavLink key={ i } to={ val.link } className="menu__link" activeClassName="menu__link_active">
                   { val.name }
               </NavLink>);
     });

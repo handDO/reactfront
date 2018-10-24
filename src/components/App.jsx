@@ -1,9 +1,9 @@
-import React, { Fragment, PureComponent } from 'react';
+import React, { PureComponent } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import '../css/App.css';
-import Header from '../containers/Header';
 import Projects from '../containers/Projects';
-import Mainpage from '../components/mainpage/mainpage';
+import Mainpage from '../components/mainpage';
+import NotFound from '../components/404';
 
 class App extends PureComponent {
   appClickHandle = (e) => {
@@ -20,14 +20,9 @@ class App extends PureComponent {
   render() {
     return (<div onClick={ this.appClickHandle }>
                 <Switch>
-                    <Route exact path="/" render={ props => <Fragment>
-                                                                <Header/>
-                                                                <Mainpage/>
-                                                            </Fragment> } />
-                    <Route path="/projects" render={ props => <Fragment>
-                                                                  <Header class="projectheader" />
-                                                                  <Projects/>
-                                                              </Fragment> } />
+                    <Route exact path="/" component={ Mainpage } />
+                    <Route path="/projects" component={ Projects } />
+                    <Route path="*" component={ NotFound } />
                 </Switch>
             </div>);
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as Actions from '../actions';
-import Projects from '../components/projects/projects';
+import Projects from '../components/projects';
 import Project from '../components/projects/project';
 const getCats = categories => categories.map((val, i) => ( <a href="/" key={ i } className="category">
                                                                { val }
